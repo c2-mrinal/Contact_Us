@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+ body {
+      background-image: url(contactBg.jpg);
+    }
+    .container{
+      height: 100vh;
+      display: flex;
+      justify-content: Center;
+      align-items: Center;
+      }
+.circle {
+display: flex;
+ justify-content: Center;
+ align-items: Center;
+ 
+} 
+
+a:focus {outline: none;}
+
+.glowing {
+   
+    -webkit-border-radius: 5px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Hack';
+    font-size: 2.5vh;
+    padding: 15px;
+    text-align: center;
+   margin: 5%;
+   
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+}
+.glowing a{
+  color: white;
+  margin: 40% auto ;
+  position: relative;
+  text-decoration: none;
+
+}
+
+
+@-webkit-keyframes glowing {
+    0% { background-color: #0bedf5fd; -webkit-box-shadow: 0 0 3px #5abdce; }
+    50% { background-color: #36d8d0f3; -webkit-box-shadow: 0 0 40px #0bd0f3; }
+    100% { background-color: #1bbba0; -webkit-box-shadow: 0 0 3px #0ac3f1; }
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 12%;
+  left: 15%;
+  width: 72%; /* Full width */
+  height: 450px; /* Full height */
+  background: #DAE2F8;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 60px;
+  border-radius: 2%;
+}
+.close {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  color: #000;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(247, 247, 247);
+  cursor: pointer;
+}
+/* 
+message us box */
+input:focus {
+    outline:none;
+}
+textarea {
+  width: 70%;
+  height: 150px;
+  margin-left: 15%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid rgb(29, 26, 26);
+  border-radius: 2vh;
+  background-color: #f8f8f800;
+  font-size: 16px;
+  resize: none;
+}.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  color: #555;
+  box-sizing: border-box;
+  font-family: 'Arvo';
+  font-size: 18px;
+  height: 50px;
+  margin: auto;
+  width: 200px;
+  padding-left: 20px;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(170, 170, 170);
+}
+.input:focus+.underline {
+  transform: scale(1); 
+}
+.textbutton button {
+margin: 0% 40%;
+padding-bottom: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <div onclick="document.getElementById('id01').style.display='block'" class=" glowing">
+      <a  class="circle"  target="_blank"><span>Call Us</span></a>
+    </div>
+    <div onclick="document.getElementById('id02').style.display='block'" class=" glowing">
+      <a class="circle"  target="_blank"><span>Mail Us</span></a>
+    </div>
+    <div onclick="document.getElementById('id03').style.display='block'" class=" glowing">
+      <a class="circle"  target="_blank"><span>Meet Us</span></a>
+    </div>
+   
+  </div>
+  <div id="id01" class="modal">
+  
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h2 style="text-align: center; padding: 20px;">Contact Us</h2>
+        <p class="d-flex" style="margin: 5% 0 0 40%;">
+          <i class="fa fa-phone fa-4x" aria-hidden="true"></i>
+          <span style="text-align: center; font-size: 3vh; padding-left: 20px;"> <a href="tel:700-414-1861"> +91 700 414 1861 </a><br><a href="tel:857-888-5418">  +91 857 888 5418</a></span>
+        </p>
+  </div>
+  <div id="id02" class="modal">
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form >
+        <h2 style="text-align: center; padding: 20px;">Message Us</h2>
+        <div class="d-flex justify-content-around">
+        <p class="" type="Name:"><label for=""><b>Your Name</b></label>
+          <input class="input" placeholder="Enter Your Name" type="text" >
+        </p>
+        <p type="Email:"><label for=""><b> Email Id </b></label> <input class="input" placeholder="Mail Address" type="email" ></p>
+        </div>
+        <div class="textbutton">
+          <p type="Message:"><textarea placeholder="What would you like to tell us.."></textarea></p>
+          <button  class="btn btn-outline-info">Send Message</button>
+        </div>
+    </form>
+   
+  </div>
+  <div id="id03" class="modal">
+    <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <h2 style="text-align: center; padding: 20px;">Reach Us At</h2>
+    <p class="d-flex" style="margin: 5% 0 0 20%;">
+      <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+      <span style="text-align: center; font-size: 3vh;"> Dhirubhai Ambani Institute of Information and Communication Technology <br> (DA-IICT), Gandhinagar, Gujarat, 382007</span>
+    </p>
+  </div>
+  <script>
+    var modal = document.getElementById('id01');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var modal = document.getElementById('id02');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var modal = document.getElementById('id03');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+  </body>
+</html>
